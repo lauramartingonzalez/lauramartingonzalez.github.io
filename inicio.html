@@ -10,28 +10,24 @@
     <link rel="dns-prefetch" href="http://fonts.googleapis.com/">
     <link rel="dns-prefetch" href="http://s.w.org/">
     <link rel="alternate" type="application/rss+xml" title="Laura Martín González » Feed" href="http://lauramartingonzalez.com/feed/">
-    <style type="text/css">
-      body.custom-background {
-        background-color: #e5e5e5;
-        },
-      img.wp-smiley,
-      img.emoji {
-        display: inline !important;
-        border: none !important;
-        box-shadow: none !important;
-        height: 1em !important;
-        width: 1em !important;
-        margin: 0 .07em !important;
-        vertical-align: -0.1em !important;
-        background: none !important;
-        padding: 0 !important;
-      }
-    </style>
     <link rel="stylesheet" id="social-widget-css" href="./css/social_widget.css" type="text/css" media="all">
     <link rel="stylesheet" id="infinity-css-960-css" href="./css/960.css" type="text/css" media="all">
-    <link rel="stylesheet" id="infinity-google-fonts-css" href="./css/css" type="text/css" media="all">
     <script type="text/javascript" src="./js/jquery.js"></script>
     <script type="text/javascript" src="./js/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="./js/superfish-combine.min.js"></script>
+    <script type="text/javascript" src="./js/common.js"></script>
+    <script type="text/javascript" src="./js/wp-embed.min.js"></script>
+    <script type="text/javascript">
+      (function($) {
+        $(document).ready(function() {
+          $(".link-to-section").click(function(e) {
+            e.preventDefault();
+            $(".status-publish").hide();
+            $("#"+$(e.target).attr("data-link-to")).show();
+          });
+        });
+      })(jQuery);
+    </script>
   </head>
 
   <body class="page page-id-12 page-template-default custom-background">
@@ -46,22 +42,22 @@
             <div class="menu">
               <ul id="menu-menu" class="sf-menu sf-js-enabled">
                 <li id="menu-item-87" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-87">
-                  <a href="./formacion.html">Formación</a>
+                  <a href="#" class="link-to-section" data-link-to="post-5">Formación</a>
                 </li>
                 <li id="menu-item-88" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88">
-                  <a href="./formacion_complementaria.html">Formación Complementaria</a>
+                  <a href="#" class="link-to-section" data-link-to="post-6">Formación Complementaria</a>
                 </li>
                 <li id="menu-item-91" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-91">
-                  <a href="./experiencia_profesional.html">Experiencia profesional</a>
+                  <a href="#" class="link-to-section" data-link-to="post-4">Experiencia profesional</a>
                 </li>
                 <li id="menu-item-211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-211">
-                  <a href="./estancias.html">Estancias</a>
+                  <a href="#" class="link-to-section" data-link-to="post-3">Estancias</a>
                 </li>
                 <li id="menu-item-90" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90">
-                  <a href="./publicaciones.html">Publicaciones</a>
+                  <a href="#" class="link-to-section" data-link-to="post-7">Publicaciones</a>
                 </li>
                 <li id="menu-item-89" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-12 current_page_item menu-item-89">
-                  <a href="./contacto.html" style="border-bottom: none;">Contacto</a>
+                  <a href="#" style="border-bottom: none;" class="link-to-section" data-link-to="post-2">Contacto</a>
                 </li>
               </ul>
             </div>
@@ -77,7 +73,7 @@
               <div id="headimg">
                 <div id="logo-text">
                   <span class="site-name">
-                    <a href="./inicio.html" title="Laura Martín González" rel="home">Laura Martín González</a>
+                    <a href="#" title="Laura Martín González" rel="home" data-link-to="post-1">Laura Martín González</a>
                   </span>
                   <span class="site-description">Página personal de Laura Martín</span>
                 </div>
@@ -94,21 +90,20 @@
 
               <div id="content">    
 
-                <div id="post-71" class="post-71 page type-page status-publish hentry">
-
+                <!-- inicio.html -->
+                <div id="post-1" class="post-1 page type-page status-publish hentry">
                   <h1 class="entry-title entry-title-single entry-title-page"></h1>
-
                   <div class="entry-content clearfix">
-                    <p style="text-align: justify;">
+                    <p>
                       Mi nombre es Laura Martín. Soy Ingeniería Técnica de Telecomunicaciones,&nbsp;especialidad en Sistemas Electrónicos, Máster en Ingeniería Acústica y Vibraciones y Máster de Investigación en Tecnologías de la&nbsp;Información y las Comunicaciones en la&nbsp;Universidad de Valladolid
                     </p>
-                    <p style="text-align: justify;">
+                    <p>
                       Mi experiencia profesional se centra en el ámbito de la investigación. Principalmente me he dedicado al procesado&nbsp;de señales biomédicas de electroencefalograma con Matlab, inteligencia artificial (Support Vector Machine)&nbsp;y programación C/C++.&nbsp;Soy coautora de 1 publicación&nbsp;en un congreso internacional, tres revistas nacionales, autora principal de una publicación en el&nbsp;Congreso Anual de la Sociedad Española de Ingeniería Biomédica, CASEIB 2012 y coautora de una publicación en un congreso nacional de acústica.
                     </p>
-                    <p style="text-align: justify;">
+                    <p>
                       Actualmente, me encuentro realizando el doctorado en comunicaciones ópticas en el CTTC, Castelldefels, (Barcelona).
                     </p>
-                    <p style="text-align: justify;">
+                    <p>
                       <strong>Datos de interés:</strong>
                     </p>
                     <ul>
@@ -119,6 +114,229 @@
                     </ul>
                   </div>
 
+                </div>
+
+
+                <!-- contacto.html -->
+                <div id="post-2" class="post-2 page type-page status-publish hentry" style="display:none">
+                  <h1 class="entry-title entry-title-single entry-title-page">Contacto</h1>
+                  <div class="entry-content clearfix">
+                    <p>Si quiere ponerse en contacto conmigo puede hacerlo a través de la dirección de correo o número de teléfono que se muestran a continuación:</p>
+                    <p><strong>E-mail</strong>: &nbsp;lauramartingc@gmail.com<br>
+                    <strong>Móvil</strong>: 656407411</p>
+                  </div>
+                </div>
+
+
+                <!--  estancias.html -->
+                <div id="post-3" class="post-3 page type-page status-publish hentry" style="display:none">
+                  <h1 class="entry-title entry-title-single entry-title-page">Estancias</h1>
+                  <div class="entry-content clearfix">
+                    <p>
+                      <strong>Ljubjana, Eslovenia ( 13/09/2010-18/09/2010)</strong>
+                    </p>
+                    <p>
+                      Euroregio Congress on Sound and Vibration
+                      <br>
+                      First Forum of Young Researchers in Acoustics.
+                      <br>
+                      European Acoustics Association (EAA).
+                    </p>
+                    <p>Euroregio Summer School
+                      <br>
+                      European Acoustics Association (EAA).
+                    </p>
+                    <p>
+                      <strong>Odense, Dinamarca (08/2008-01/2009)</strong>
+                    </p>
+                    <p>Proyecto fin de carrera, The Wind Mill Technology,
+                      <br>
+                      University of Southern Denmark.
+                      <br>
+                      Estudio de la tecnología de un aerogenerador.
+                    </p>
+                    <p>
+                      Curso de Project Management ( 08/2008-12/2009 )
+                      <br>
+                      University of Southern Denmark.
+                    </p>
+                    <p>
+                      English Language Course ( 08/2008-01/2009 )
+                      <br>
+                      University of Southern Denmark.
+                    </p>
+                    <p>
+                      <strong>Dublín, Irlanda (04/07/2001-31/07/2001)</strong>
+                      <br>
+                      International House Dublin
+                      <br>
+                      Pre-intermediate english course.
+                    </p>
+                  </div>
+                </div>
+
+
+                <!-- experiencia profesional -->
+                <div id="post-4" class="post-4 page type-page status-publish hentry" style="display:none">
+                  <h1 class="entry-title entry-title-single entry-title-page">Experiencia profesional</h1>
+                  <div class="entry-content clearfix">
+                    <p>
+                      <strong>Contratada como personal investigador en formación &nbsp;predoctoral ( 01/06/2014-actualmente)</strong>
+                      <br>
+                      Centre Tecnològic de Telecomunicacions de Catalunya (CTTC), Parc Mediterrani de la Tecnologia (PMT), Castelldefels, Barcelona
+                      <br>
+                      Doctorado en comunicaciones ópticas.Detección directa y coherente en sistemas OFDM. Grupo de Redes y Sistemas Ópticos (<a href="http://http//www.cttc.es">CTTC</a>).
+                    </p>
+                    <p>
+                      <strong>Contratada como apoyo a proyecto de investigación ( 18/12/2012-30/04/2013 )</strong>
+                      <br>
+                      Escuela Politécnica Superior, Universidad de Alcalá de Henares
+                      <br>
+                      Desarrollo de un sistema de evaluación de reconocimiento de trayectorias en C/C++. Grupo de Reconocimiento y Análisis Multisensorial &nbsp;(<a href="http://agamenon.tsc.uah.es/Investigacion/gram/">GRAM</a>).
+                    </p>
+                    <p>
+                      <strong> Contratada a cargo de proyecto de investigación ( 01/07/2011-31/03/2012 ) </strong>
+                      <br>
+                      Escuela Superior de Telecomunicaciones, Universidad de Valladolid
+                      <br>
+                      Desarrollo de un sistema Brain Computer Interface (BCI) basado en potenciales evocados P300 para el control de dispositivos electrónicos. Procesado de señales biomédicas con Matlab. Análisis espectral y análisis no lineal (SVM). Realización de informes y memorias técnicas. Grupo de Ingeniería Biomédica (<a href="http://www.gib.tel.uva.es/">GIB</a>).
+                    </p>
+                    <p>
+                      <strong>Beca de investigación ( 01/01/2011-30/06/2011 )</strong>
+                      <br>
+                      Escuela Superior de Telecomunicaciones, Universidad de Valladolid
+                      <br>
+                      Diseño de un sistema Brain Computer Interface (BCI) basado en potenciales evocados P300 para el control de dispositivos domóticos y electrónicos. Sistema de propósito general BCI2000. Evaluación de la aplicación con usuarios del CRE de Discapacidad y Dependencia de Léon. Grupo de Ingeniería Biomédica (<a href="http://www.gib.tel.uva.es/">GIB</a>).
+                    </p>
+                    <p>
+                      <strong> Prácticas como Técnico de laboratorio de Acústica ( 01/05/2010-30/08/2010 )</strong>
+                      <br>
+                      Audiotec S.A., Valladolid (<a href="http://www.audiotec.es/">Audiotec S.A.</a>)
+                      <br>
+                      Mediciones in situ a ruido aéreo, a ruido de impacto, a ruido aéreo de elementos de fachadas y fachadas, mediciones de niveles de inmisión sonora. Analizador/Sonómetro B&amp;K tipo 2260 ‘ Investigator’. Elaboración de informes técnicos correspondientes a los ensayos in situ.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- formacion.html -->
+                <div id="post-5" class="post-5 page type-page status-publish hentry" style="display:none">
+                  <h1 class="entry-title entry-title-single entry-title-page">Formación</h1>
+                  <div class="entry-content clearfix">
+                    <p>
+                      <strong>Máster Universitario de Investigación en Tecnologías de la Información y las Comunicaciones Tratamiento de Señales y Bioingeniería, ( 2010-2012 )</strong>
+                      <br>
+                      Escuela Técnica Superior de Ingenieros de Telecomunicación, Universidad de Valladolid.
+                      <br>
+                      Metodología y herramientas aplicadas a la investigación e innovación, procesado de señales biomédicas, análisis no lineal, instrumentación biomédica, procesado multidimensional.
+                    </p>
+                    <p>
+                      <strong>Trabajo fin de máster,&nbsp;Desarrollo de un sistema Brain Computer&nbsp;Interface basado en potenciales evocados P300&nbsp;para el control de dispositivos domóticos, ( 09/2012 )</strong>
+                      <br>
+                      Estudio del conjunto&nbsp;de datos II de la III Competición BCI de 2004 proporcionados por el centro de Wadsworth. Profundización&nbsp;en métodos de selección y clasificación&nbsp;de características, en particular, en máquinas de vector soporte (Support Vector Machine, SVM).Desarrollo y diseño de una aplicación BCI para el control por parte de personas discapacitadas y en situación de dependencia de dispositivos&nbsp;domóticos y electrónicos presentes habitualmente en una vivienda.
+                    </p>
+                    <p>
+                      <strong>Máster de Ingeniería Acústica y Vibraciones</strong>
+                      <strong>, ( 2009-2010 )</strong>
+                      <br>
+                      Escuela Técnica Superior de Arquitectura, Universidad de Valladolid.
+                      <br>
+                      Principios básicos de la acústica y las vibraciones, acústica arquitectónica, acústica ambiental, acústica industrial.
+                    </p>
+                    <p>
+                      <strong>Trabajo fin de máster, Protocolo de muestreo acústico de edificios en Castilla y León, ( 09/2010 )</strong>
+                      <br>
+                      Estudio de un protocolo de muestreo acústico en edificación y su puesta en práctica, con los respectivos ensayos in situ, en una promoción real de viviendas.
+                    </p>
+                    <p>
+                      <strong>Ingeniería Técnica de Telecomunicaciones, Sistemas Electrónicos, ( 2002-2009 )&nbsp;</strong>
+                      <br>
+                      Escuela Universitaria Politécnica, Universidad de Valladolid.
+                      <br>
+                      Electrónica analógica y digital, diseño de circuitos, instrumentación y equipos electrónicos, programación C, procesado digital de la señal, sistemas electrónicos de control, teoría de la comunicación, señales y sistemas.
+                    </p>
+                    <p>
+                      <strong>Proyecto fin de carrera,&nbsp;The Wind Mill Technology, ( 01/2009)</strong>
+                      <br>
+                      University of Southern Denmark, Odense, Dinamarca.
+                      <br>
+                      Estudio de la tecnología de un aerogenerador.
+                    </p>
+                  </div>
+                </div>
+
+
+                <!-- formacion_complementaria.html -->
+                <div id="post-6" class="post-6 page type-page status-publish hentry" style="display:none">
+                  <h1 class="entry-title entry-title-single entry-title-page">Formación Complementaria</h1>
+                  <div class="entry-content clearfix">
+                    <p>
+                      <strong>Brain Computer Interface Workshop ( 04/2012 )</strong>
+                      <br>
+                      Workshop organizado por la empresa g.tec (<a href="http://www.gtec.at/">gtec</a>) en la Escuela Técnica Superior de Ingenieros de Telecomunicación. Universidad de Valladolid.
+                    </p>
+                    <p>
+                      <strong>Euroregio Congress on Sound and Vibration ( 09/2010 )</strong>
+                      <br>
+                      First Forum of Young Researchers in Acoustics. Organizado por la European Acoustics Association (EAA) en Ljubljana, Eslovenia.
+                    </p>
+                    <p>
+                      <strong>Euroregio Summer School ( 09/2010 )</strong>
+                      <br>
+                      Organizado por European Acoustics Association (EAA) en Ljubljana, Eslovenia.
+                    </p>
+                    <p>
+                      <strong>Curso de Project Management ( 08/2008-12/2008 )</strong>
+                      <br>
+                      University of Southern Denmark de Odense, Dinamarca.
+                    </p>
+                    <p>
+                      <strong>VI Curso de Logística Integral ( 04/2008 )</strong>
+                      <br>
+                      Escuela Universitaria Politécnica, Universidad de Valladolid (40 h.).
+                    </p>
+                    <p>
+                      <strong>Idiomas</strong>
+                    </p>
+                    <p>
+                      <strong>Inglés&nbsp; escrito:</strong> medio
+                      <br>
+                      <strong> Inglés hablado: </strong>medio
+                    </p>
+                    <p>
+                      <strong>English Language Course ( 08/2008-01/2009 )</strong>
+                      <br>
+                      University of Southern Denmark , Odense, Dinamarca.
+                    </p>
+                  </div>
+                </div>
+
+
+                <!-- publicaciones.html -->
+                <div id="post-7" class="post-7 page type-page status-publish hentry" style="display:none">
+                  <h1 class="entry-title entry-title-single entry-title-page">Publicaciones</h1>
+                  <div class="entry-content clearfix">
+                    <p>
+                      <strong>PROCESADO DE SEÑALES BIOMÉDICAS</strong>
+                    </p>
+                    <p>
+                      Roberto Hornero, Rebeca Corralejo, Daniel Álvarez, <strong>Laura Martín</strong>, “Diseño, desarrollo y evaluación de un sistema Brain Computer Interface (BCI) aplicado al control de dispositivos domóticos para mejorar la calidad de vida de las personas con grave discapacidad”,&nbsp;<a href="http://www.mapfre.com/fundacion/es/publicaciones/salud/revistas/revista-trauma-fundacion-mapfre.shtml" target="_blank">Trauma</a>, vol. 24, 2, pp. 117-125, 2013
+                    </p>
+                    <p>
+                      <strong>Laura Martín</strong>, Rebeca Corralejo y Roberto Hornero, “Aplicación de las Máquinas de Vector Soporte a Sistemas Brain Computer Interface Basados en Potenciales P300,” XXX Congreso Anual de la Sociedad Española de Ingeniería Biomédica (CASEIB 2012), San Sebastián (España), 2012.
+                    </p>
+                    <p>
+                      Rebeca Corralejo, Roberto Hornero, Daniel Álvarez y <strong>Laura Martín</strong>,”Improving the Accesibility at Home: Implementation of a Domotic Application using a P300-Based Brain Computer Interface System”, Journal os Accesibility and Design for lAl (JACCES), vol. 2, 1, pp. 1-14, Mayo, 2012.
+                    </p>
+                    <p>
+                      Rebeca Corralejo, Roberto Hornero, Daniel Álvarez y <strong>Laura Martín</strong>,”Improving the Accesibility at Home: Implementation of a Domotic Application using a P300-Based Brain Computer Interface System”, IV Congreso Intenacional de Diseño, Redes de Investigación y Tecnología para todos (DRT4ALL 2011), Libro de Actas del IV Congreso Internacional de Diseño, Redes de Investigación y Tecnología para todos, ISBN: 978-84-88934-50-5, pp.. 75-84, Madrid (Spain), 2011.
+                    </p>
+                    <p>
+                      <strong>INGENIERÍA ACÚSTICA</strong>
+                    </p>
+                    <p>
+                      Ángel Arenaz Gombau, Ana E. Espinel Valdivieso y <strong>Laura Martín González</strong> ‘Metodología de muestreo acústico de edificios’&nbsp; Tecniacústica León, 41º Congreso Nacional de Acústica, 6º Congreso Ibérico de Acústica, 2010.
+                    </p>
+                  </div>
                 </div>
 
               </div>
@@ -172,10 +390,6 @@
       </div>
 
     </div>
-
-    <script type="text/javascript" src="./js/superfish-combine.min.js"></script>
-    <script type="text/javascript" src="./js/common.js"></script>
-    <script type="text/javascript" src="./js/wp-embed.min.js"></script>
 
   </body>
 

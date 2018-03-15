@@ -16,6 +16,9 @@
 body {
   min-width: 960px;
 }
+body.custom-background {
+  background-color: #e5e5e5;
+}
 
 /* `Container
 ----------------------------------------------------------------------------------------------------*/

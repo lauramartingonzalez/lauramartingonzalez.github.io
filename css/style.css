@@ -157,6 +157,7 @@ body {
 #content {
 	padding: 30px 29px 30px 30px;
 	border-right: solid 1px #eee;
+	min-height: 700px;
 }
 
 #sidebar {
@@ -199,6 +200,7 @@ body {
 p { 
 	line-height: 22px;
 	margin: 0 0 22px 0;
+	text-align: justify;
 }
 
 p:last-child {
@@ -643,6 +645,18 @@ input[type="button"]:active {
 | =Images
 |------------------------
 */
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
 
 p img {}
 
